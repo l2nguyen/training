@@ -7,8 +7,6 @@ stories:
    - action: newsletter_form
    - active_loop: newsletter_form
 
-
-
 - story: interactive_story_1
   steps:
   - intent: greet
@@ -19,7 +17,7 @@ stories:
   - slot_was_set:
     - requested_slot: email
   - slot_was_set:
-    - email: lena@email.com
+    - email: lena@test.com
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
