@@ -1,7 +1,13 @@
 # ignore models
-models/
+**/models
 # ignore rasa cache
-.rasa/cache/
+**/.rasa
 
-# Byte-compiled / optimized / DLL files
-__pycache__/
+**/__pycache__
+
+**/*.db*
+**/story_graph.dot
+
+.vscode
+.idea
+.DS_Store
