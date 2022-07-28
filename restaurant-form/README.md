@@ -1,6 +1,6 @@
-# Newsletter bot
+# Restaurant form bot
 
-Example of Duckling extracting email entity
+Example of form 
 
 Note: This uses Rasa 3.x
 
@@ -8,6 +8,7 @@ Note: This uses Rasa 3.x
 
 The bot consists of the following files:
 
+- **actions/actions.py** contains code to validate form
 - **data/nlu.yml** contains training examples for the NLU model
 - **data/rules.yml** contains training rules for the Core model
 - **config.yml** contains the model configuration
@@ -29,7 +30,13 @@ The bot consists of the following files:
    ```
    or [installing duckling](https://github.com/facebook/duckling#requirements) directly on your machine and starting the server.
 
-3. Test the assistant by running:
+
+3. Start your action server
+   ```
+   rasa run actions
+   ```
+
+4. Test the assistant by running:
     ```
     rasa shell
     ```
@@ -38,4 +45,4 @@ The bot consists of the following files:
 For more information about the individual commands, please check out our
 [documentation](http://rasa.com/docs/rasa/command-line-interface).
 
-4. To activate form, say `I want to get the newsletter` to the bot.
+5. To activate form, say something that would trigger the `request_restaurant` intent to the bot.
