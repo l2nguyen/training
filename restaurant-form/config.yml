@@ -1,0 +1,20 @@
+recipe: default.v1
+language: en
+
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+    token_pattern: (?u)\b\w+\b
+  - name: DucklingEntityExtractor
+    url: http://localhost:8000
+    dimensions:
+      - number
+  - name: DIETClassifier
+  - name: EntitySynonymMapper
+
+policies:
+  - name: AugmentedMemoizationPolicy
+  - name: RulePolicy
+  - name: TEDPolicy
+    epochs: 1
